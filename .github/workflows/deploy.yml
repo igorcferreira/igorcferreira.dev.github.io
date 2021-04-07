@@ -1,7 +1,8 @@
 name: Deploy Static files
 
 on:
-  push: main
+  push:
+    branches: [ main ]
 
 jobs:
   publish:
