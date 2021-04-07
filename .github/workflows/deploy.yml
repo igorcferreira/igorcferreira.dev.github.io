@@ -7,6 +7,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: main
     steps:
       - name: Checkout plugin
         uses: actions/checkout@v2
@@ -20,7 +21,6 @@ jobs:
       - name: Checkout Static branch
         uses: actions/checkout@v2
         with:
-          token: ${{ secrets.DEPLOY_PAT }}
           ref: gh-pages
           clean: false
       - name: Clean folder
