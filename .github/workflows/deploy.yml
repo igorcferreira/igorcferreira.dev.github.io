@@ -1,0 +1,37 @@
+name: Deploy Static files
+
+on:
+  push: main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout plugin
+        uses: actions/checkout@v2
+        with:
+          path: main
+      - name: Install gem dependencies
+        run: |
+          bundle install
+      - name: Build Static files
+        run: |
+          bundle exec jekyll build
+      - name: Checkout Static branch
+        run: |
+          git checkout gh-pages
+      - name: Clean folder
+        run: |
+          rm -v !(_site)
+      - name: Move files
+        run: |
+          cp -r _site .
+      - name: Remove _site folder
+        run: |
+          rm -r _site
+      - name: Commit changes
+        run: |
+          git add . && git commit -m "Publish new version"
+      - name: Push changes
+        run: |
+          git push origin gh-pages
