@@ -10,16 +10,19 @@ jobs:
     steps:
       - name: Checkout plugin
         uses: actions/checkout@v2
-        with:
-          path: main
-      - name: Install gem dependencies
+      - name: Remove lock to avoid Mac issues
         run: |
-          bundle install
+          rm Gemfile.lock
+      - uses: ruby/setup-ruby@v1
+        name: Install dependencies
+        with:
+          bundler-cache: true
       - name: Build Static files
         run: |
           bundle exec jekyll build
       - name: Checkout Static branch
         run: |
+          git fetch --all --prune
           git checkout gh-pages
       - name: Clean folder
         run: |

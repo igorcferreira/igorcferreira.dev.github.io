@@ -2,7 +2,6 @@
 _gh_pages
 _site
 .jekyll-cache
-.ruby-version
 .ruby-gemset
 
 # Numerous always-ignore extensions
