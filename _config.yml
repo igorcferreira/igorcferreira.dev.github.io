@@ -34,6 +34,13 @@ plugins:
 languages: ["en", "pt"]
 defaultLang: en
 exclude_from_localizations: ["javascript", "images", "public"]
+languagesInfo:
+  - key: pt
+    name: Português
+    message: Ver o site em Português
+  - key: en
+    name: English
+    message: See the site in English
 languageNames:
   pt: Português
   en: English
