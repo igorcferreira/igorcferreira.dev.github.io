@@ -1,10 +1,10 @@
 ---
 layout: post
 category: SwiftUI
-title: Using DynamicNavigationDestinationLink
+title: Usando DynamicNavigationDestinationLink
 ---
 
-Because of a [thread on Twitter](https://twitter.com/thwittem/status/1143272885588549632), I created this [simple gist](https://gist.github.com/igorcferreira/b302ea59830ce1a3ee2558fa996505ea) with an attempt to simulate the use of DynamicNavigationDestinationLink to display a content fetched from an external source, it may be useful for you on trying to find a solution for your crashes.
+Por causa de uma [thread no Twitter](https://twitter.com/thwittem/status/1143272885588549632), eu criei um [pequeno gist](https://gist.github.com/igorcferreira/b302ea59830ce1a3ee2558fa996505ea) com uma tentativa de simular o use de DynamicNavigationDestinationLink para mostrar um conteúdo carregado de uma fonte externa. Isso pode ser útil para quem está em busca da fonte de um crash.
 
 ```swift
 import SwiftUI
@@ -58,4 +58,4 @@ PlaygroundPage.current.liveView = UIHostingController(rootView: RootView())
 PlaygroundPage.current.needsIndefiniteExecution = true
 ```
 
-P.s.: It is as a Playground because I prefer this way to test/run SwiftUI on Mojave.
+P.s.: Esse código foi feito em um Playground porque eu prefiro essa ferramenta para executar testes/exemplos de SwiftUI no Mojave.
