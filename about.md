@@ -1,6 +1,7 @@
 ---
 layout: page
-title: titles.about
+title: About
+i18ntitle: titles.about
 namespace: about
 ---
 

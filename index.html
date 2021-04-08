@@ -1,6 +1,7 @@
 ---
 layout: default
 title: site.title
+i18ntitle: site.title
 ---
 
 <div class="posts">
@@ -8,7 +9,7 @@ title: site.title
   <div class="post">
     <h1 class="post-title">
       <a href="{{ site.baseurl }}{{ post.url }}">
-        {% t post.title %}
+        {% include  titleformat.html item=post %}
       </a>
     </h1>
 

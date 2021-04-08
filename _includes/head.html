@@ -15,8 +15,8 @@
   <meta property="og:image" content="{{ site.url }}/public/user_avatar.png" />
   {% endif %}
 
-  <meta property="og:title" content="{% t page.title %}" />
-  <meta name="twitter:title" content="{% t page.title %}" />
+  <meta property="og:title" content="{% include  titleformat.html item=page %}" />
+  <meta name="twitter:title" content="{% include  titleformat.html item=page %}" />
 
   {% if page.description %}
   <meta property="og:description" content="{% t page.description %}" />
@@ -26,16 +26,16 @@
   <meta name="twitter:description" content="{% t site.tagline %}" />
   {% endif %}
 
-  <!-- {% feed_meta %} -->
+  {% feed_meta %}
 
   <!-- Enable responsiveness on mobile devices-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-    {% if page.title == "site.title" %}
-      {% t site.title %} &middot; {% t site.tagline %}
+    {% if page.i18ntitle == "site.title" %}
+      {% include  titleformat.html item=site %} &middot; {% t site.tagline %}
     {% else %}
-      {% t page.title %} &middot; {% t site.title %}
+      {% include  titleformat.html item=page %} &middot; {% t site.title %}
     {% endif %}
   </title>
 

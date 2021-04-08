@@ -1,0 +1,5 @@
+{% if include.item.i18ntitle == null %} 
+{{ include.item.title }}
+{% else %}
+{% t include.item.i18ntitle %}
+{% endif %}

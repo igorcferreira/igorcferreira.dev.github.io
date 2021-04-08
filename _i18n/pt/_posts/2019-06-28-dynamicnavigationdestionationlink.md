@@ -2,6 +2,7 @@
 layout: post
 category: SwiftUI
 title: titles.post.dynamic_link
+i18ntitle: titles.post.dynamic_link
 description: descriptions.post.dynamic_link
 ---
 

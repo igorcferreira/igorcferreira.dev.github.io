@@ -1,7 +1,8 @@
 ---
 layout: post
 category: SwiftUI
-title: titles.post.dynamic_link
+title: Using DynamicNavigationDestinationLink
+i18ntitle: titles.post.dynamic_link
 description: descriptions.post.dynamic_link
 ---
 
