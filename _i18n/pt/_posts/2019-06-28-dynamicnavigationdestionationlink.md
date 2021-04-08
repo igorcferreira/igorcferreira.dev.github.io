@@ -1,7 +1,7 @@
 ---
 layout: post
 category: SwiftUI
-title: Usando DynamicNavigationDestinationLink
+title: titles.post.dynamic_link
 ---
 
 Por causa de uma [thread no Twitter](https://twitter.com/thwittem/status/1143272885588549632), eu criei um [pequeno gist](https://gist.github.com/igorcferreira/b302ea59830ce1a3ee2558fa996505ea) com uma tentativa de simular o use de DynamicNavigationDestinationLink para mostrar um conteúdo carregado de uma fonte externa. Isso pode ser útil para quem está em busca da fonte de um crash.

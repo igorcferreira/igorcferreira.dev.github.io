@@ -5,7 +5,7 @@ layout: default
 {% include dateformat.html date=page.date %}
 
 <div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title">{% t page.title %}</h1>
   <span class="post-date">{{ formatted_date }}</span>
   {{ content }}
 </div>
@@ -17,7 +17,7 @@ layout: default
       <li>
         <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
+            {% t post.title %}
             <small>{{ formatted_date }}</small>
           </a>
         </h3>

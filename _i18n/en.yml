@@ -6,6 +6,8 @@ site:
     Here, I will mostly post things about Swift, iOS, and some other random dev tools
 titles:
   about: About
+  post:
+    dynamic_link: Using DynamicNavigationDestinationLink
 error:
   404:
     title: 404 - Page not found
