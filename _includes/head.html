@@ -4,9 +4,9 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
   {% if page.image %}
-  <meta property="og:image" content="{{ site.baseurl_root }}/{{ page.image }}">
+  <meta property="og:image" content="{{ site.url }}/{{ page.image }}">
   {% else %}
-  <meta property="og:image" content="{{ site.baseurl_root }}/public/user_avatar.png">
+  <meta property="og:image" content="{{ site.url }}/public/user_avatar.png">
   {% endif %}
 
   <meta property="og:title" content="{% t page.title %}">

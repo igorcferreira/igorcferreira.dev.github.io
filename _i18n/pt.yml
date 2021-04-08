@@ -8,6 +8,10 @@ titles:
   about: Sobre
   post:
     dynamic_link: Usando DynamicNavigationDestinationLink
+descriptions:
+  post:
+    dynamic_link: |
+      Uma pequena demonstração do use do DynamicNavigationDestinationLink
 error:
   404:
     title: 404 - Página não encontrada
