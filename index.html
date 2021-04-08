@@ -2,6 +2,7 @@
 layout: default
 title: Igor Ferreira
 ---
+
 <div class="posts">
   {% for post in paginator.posts %}
   <div class="post">
@@ -11,7 +12,8 @@ title: Igor Ferreira
       </a>
     </h1>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+    {% include dateformat.html date=post.date %}
+    <span class="post-date">{{ formatted_date }}</span>
 
     {{ post.content }}
   </div>

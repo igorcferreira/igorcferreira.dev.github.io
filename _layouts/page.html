@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include dateformat.html date=page.date %}
+
 <div class="page">
   <h1 class="page-title">{% t page.title %}</h1>
   {{ content }}

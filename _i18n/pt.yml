@@ -9,3 +9,5 @@ error:
     title: 404 - Page not found
     message: Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. 
     link: Head back home to try finding it again
+date:
+  month: [Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez]
