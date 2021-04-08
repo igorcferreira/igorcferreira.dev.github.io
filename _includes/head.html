@@ -5,12 +5,16 @@
 
   {% if page.image %}
   <meta property="og:image" content="{{ site.baseurl_root }}/{{ page.image }}">
+  {% else %}
+  <meta property="og:image" content="{{ site.baseurl_root }}/public/user_avatar.png">
   {% endif %}
 
-  {% if page.title == "site.title" %}
-  <meta property="og:title" content="{% t site.title %}">
-  {% else %}
   <meta property="og:title" content="{% t page.title %}">
+
+  {% if page.description %}
+  <meta property="og:description" content="{% t page.description %}">
+  {% else %}
+  <meta property="og:description" content="{% t site.tagline %}">
   {% endif %}
 
   {% feed_meta %}
