@@ -47,7 +47,7 @@ languageNames:
 
 feed:
   path: atom.xml
-  excerpt_only: true
+  excerpt_only: false
 
 exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefile', 'static.json', 'README.md', 'CONTRIBUTING.md', 'LICENSE.md']
 
