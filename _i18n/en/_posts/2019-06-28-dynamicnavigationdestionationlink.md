@@ -1,10 +1,9 @@
 ---
 layout: post
-category: SwiftUI
+categories: [iOS, SwiftUI]
 title: Using DynamicNavigationDestinationLink
 i18ntitle: titles.post.dynamic_link
 description: descriptions.post.dynamic_link
-tags: [iOS, SwiftUI]
 ---
 
 Because of a [thread on Twitter](https://twitter.com/thwittem/status/1143272885588549632), I created this [simple gist](https://gist.github.com/igorcferreira/b302ea59830ce1a3ee2558fa996505ea) with an attempt to simulate the use of DynamicNavigationDestinationLink to display a content fetched from an external source, it may be useful for you on trying to find a solution for your crashes.
