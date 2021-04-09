@@ -5,7 +5,7 @@
 <!-- Toggleable sidebar -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-item">
-    <p>{% t site.description %}</p>
+    <p>{% t information.description %}</p>
   </div>
 
   <nav class="sidebar-nav">
@@ -29,17 +29,19 @@
 
     <a class="sidebar-nav-item" href="{{ site.github.repo }}">{% t sidebar.github %}</a>
     <a class="sidebar-nav-item" href="{{ site.baseurl }}/{{ site.feed.path }}">{% t sidebar.atom %}</a>
-    <span class="sidebar-nav-item">{% t sidebar.currently %} v{{ site.version }}</span>
-    <span class="sidebar-nav-item">
-      {% t navigation.other_language %}:
-      {% for info in site.languagesInfo %}
-      {% if info.key != site.lang %}
-      <a href="{{ site.baseurl_root }}{% if info.key != site.defaultLang %}/{{ info.key }}{% endif %}{{ page.url }}">
-        <span class="sidebar-nav-item">{{ info.message }}</span>
-      <a>
-      {% endif %}
-      {% endfor %}
-    </span>
+    {% if site.categories.size > 0 %}
+    <a class="sidebar-nav-item" href="{{ site.baseurl }}/categories#{{ category_name }}">
+    {% t navigation.categories %}
+    </a>
+    {% endif %}
+    {% t navigation.other_language %}:
+    {% for info in site.languagesInfo %}
+    {% if info.key != site.lang %}
+    <a class="sidebar-nav-item" href="{{ site.baseurl_root }}{% if info.key != site.defaultLang %}/{{ info.key }}{% endif %}{{ page.url }}">
+      {{ info.message }}
+    <a>
+    {% endif %}
+    {% endfor %}
   </nav>
 
   <div class="sidebar-item">

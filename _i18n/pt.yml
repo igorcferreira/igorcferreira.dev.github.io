@@ -1,4 +1,4 @@
-site:
+information:
   title: Igor Ferreira
   tagline: Um simples blog, sobre minhas descoberta no mundo da tecnologia
   description: |
@@ -29,5 +29,6 @@ navigation:
   older: Mais recente
   newer: Mais antigo
   other_language: Outros idiomas
+  categories: Categorias
 footer:
   related: Posts relacionados

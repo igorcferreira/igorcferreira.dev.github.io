@@ -22,8 +22,8 @@
   <meta property="og:description" content="{% t page.description %}" />
   <meta name="twitter:description" content="{% t page.description %}" />
   {% else %}
-  <meta property="og:description" content="{% t site.tagline %}" />
-  <meta name="twitter:description" content="{% t site.tagline %}" />
+  <meta property="og:description" content="{% t information.tagline %}" />
+  <meta name="twitter:description" content="{% t information.tagline %}" />
   {% endif %}
 
   {% feed_meta %}
@@ -32,8 +32,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-    {% if page.i18ntitle == "site.title" %}
-      {% include  titleformat.html item=site %} &middot; {% t site.tagline %}
+    {% if page.i18ntitle == "information.title" %}
+      {% t information.title %} &middot; {% t information.tagline %}
     {% else %}
       {% include  titleformat.html item=page %}
     {% endif %}
