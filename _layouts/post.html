@@ -2,16 +2,10 @@
 layout: default
 ---
 
-{% include dateformat.html date=page.date %}
-
-<div class="post">
-  <h1 class="post-title">{% include titleformat.html item=page %}</h1>
-  <span class="post-date">{{ formatted_date }}</span>
-  {{ content }}
-</div>
+{% include postcontent.html post=page %}
 
 <div class="related">
-  <h2>Related Posts</h2>
+  <h2>{% t footer.related %}</h2>
   <ul class="related-posts">
     {% for post in site.related_posts limit:3 %}
       <li>

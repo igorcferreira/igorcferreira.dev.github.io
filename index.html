@@ -1,23 +1,12 @@
 ---
 layout: default
-title: site.title
+title: Igor Ferreira
 i18ntitle: site.title
 ---
 
 <div class="posts">
   {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {% include  titleformat.html item=post %}
-      </a>
-    </h1>
-
-    {% include dateformat.html date=post.date %}
-    <span class="post-date">{{ formatted_date }}</span>
-
-    {{ post.content }}
-  </div>
+  {% include postcontent.html post=post %}
   {% endfor %}
 </div>
 

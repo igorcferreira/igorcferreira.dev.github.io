@@ -1,0 +1,13 @@
+<div class="post">
+    {% include dateformat.html date=include.post.date %}
+
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ include.post.url }}">
+        {% include  titleformat.html item=include.post %}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ formatted_date }} {{ include.post.tags | sort | join: ", " }}</span>
+
+    {{ include.post.content }}
+</div>
