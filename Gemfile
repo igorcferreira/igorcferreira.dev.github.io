@@ -3,7 +3,7 @@ source "https://rubygems.org"
 ruby '2.7.3'
 
 gem 'rake', '~> 13.0.3'
-gem 'puma', '~> 5.5.1'
+gem 'puma', '~> 5.6.2'
 
 group :jekyll_plugins do
 	gem 'jekyll', '~> 4.2.0'
