@@ -17,7 +17,7 @@ jobs:
           bundler-cache: true
       - name: Build Static files
         run: |
-          bundle exec jekyll build
+          rake
       - name: Checkout Static branch
         uses: actions/checkout@v2
         with:
