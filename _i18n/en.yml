@@ -5,7 +5,6 @@ information:
     A simple blog, about my technical discoveries along the way. 
     Here, I will mostly post things about Swift, iOS, and some other random dev tools
 titles:
-  about: About
   post:
     dynamic_link: Using DynamicNavigationDestinationLink
 descriptions:

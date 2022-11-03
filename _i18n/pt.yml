@@ -5,7 +5,6 @@ information:
     Um simples blog, sobre minhas descoberta no mundo da tecnologia.
     Aqui, eu vou postar sobre Swift, iOS e algums outros temas aleatórios
 titles:
-  about: Sobre
   post:
     dynamic_link: Usando DynamicNavigationDestinationLink
 descriptions:
