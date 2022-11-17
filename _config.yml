@@ -39,10 +39,10 @@ exclude_from_localizations: ["javascript", "images", "public"]
 languagesInfo:
   - key: pt
     name: Português
-    message: Ver o site em Português
+    message: PT
   - key: en
     name: English
-    message: See the site in English
+    message: EN
 languageNames:
   pt: Português
   en: English

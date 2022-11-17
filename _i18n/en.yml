@@ -21,13 +21,12 @@ date:
 sidebar:
   currently: Currently
   copyright: All rights reserved
-  github: Github project
-  atom: Atom feed
+  atom: Feed
   home: Home
 navigation:
   older: Older
   newer: Newer
-  other_language: Other languages
+  other_language: Languages
   categories: Categories
 footer:
   related: Related Posts

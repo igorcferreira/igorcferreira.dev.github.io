@@ -21,13 +21,12 @@ date:
 sidebar:
   currently: Atualmente
   copyright: Todos os direitos reservados
-  github: Projeto github
-  atom: Feed Atom
-  home: Página inicial
+  atom: Feed
+  home: Home
 navigation:
   older: Mais recente
   newer: Mais antigo
-  other_language: Outros idiomas
+  other_language: Idiomas
   categories: Categorias
 footer:
   related: Posts relacionados
