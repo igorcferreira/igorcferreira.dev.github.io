@@ -23,7 +23,6 @@
     </a>
     {% endif %}
     <div class="language-area">
-      {% t navigation.other_language  %}:
       {% for info in site.languagesInfo %}
       {% if info.key != site.lang %}
       <a class="language-link" href="{{ site.baseurl_root }}{% if info.key != site.defaultLang %}/{{ info.key }}{% endif %}{{ page.url }}">
