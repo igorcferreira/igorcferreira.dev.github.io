@@ -22,13 +22,15 @@
     {% t navigation.categories %}
     </a>
     {% endif %}
-    {% t navigation.other_language %}:
-    {% for info in site.languagesInfo %}
-    {% if info.key != site.lang %}
-    <a class="sidebar-nav-item" href="{{ site.baseurl_root }}{% if info.key != site.defaultLang %}/{{ info.key }}{% endif %}{{ page.url }}">
-      {{ info.message }}
-    <a>
-    {% endif %}
-    {% endfor %}
+    <div class="language-area">
+      {% t navigation.other_language  %}:
+      {% for info in site.languagesInfo %}
+      {% if info.key != site.lang %}
+      <a class="language-link" href="{{ site.baseurl_root }}{% if info.key != site.defaultLang %}/{{ info.key }}{% endif %}{{ page.url }}">
+        <img class="language-icon" src="/public/{{info.icon }}" alt="{{ info.name }}" />
+      <a>
+      {% endif %}
+      {% endfor %}
+    </div>
   </nav>
 </div>

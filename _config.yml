@@ -40,9 +40,11 @@ languagesInfo:
   - key: pt
     name: Português
     message: PT
+    icon: 'flag_brazil.svg'
   - key: en
     name: English
     message: EN
+    icon: 'flag_uk.svg'
 languageNames:
   pt: Português
   en: English
