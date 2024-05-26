@@ -24,7 +24,7 @@ struct Home: LocalizablePage {
     }
     
     func body(context: PublishingContext) -> [BlockElement] {
-        if let content = context.allContent.sorted(by: \.date, order: .reverse).first {
+        if let content = context.content(ofType: locale.identifier).sorted(by: \.date, order: .reverse).first {
             return Story().body(content: content, context: context)
         } else {
             return []

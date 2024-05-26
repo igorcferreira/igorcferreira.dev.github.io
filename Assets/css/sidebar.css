@@ -54,7 +54,7 @@
 .sidebar {
   padding: .5rem;
   color: rgba(255,255,255,.6);
-  background-color: #202020;
+  background-color: #404040;
 }
 
 /* Sidebar content */
@@ -93,11 +93,5 @@ a.sidebar-nav-item:focus {
   .sidebar-nav-item {
     padding-left:  0.5rem;
     padding-right: 0.5rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .sidebar {
-    background-color: #404040;
   }
 }
