@@ -4,20 +4,38 @@ on:
   push:
     branches: [ main ]
 
+env:
+  Hostname: "https://igorcferreira.dev"
+  AuthorName: "Igor Ferreira"
+  SiteName: "Development Blog"
+
 jobs:
   publish:
-    runs-on: ubuntu-latest
     environment: main
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        swift: ["5"]
+    runs-on: ${{ matrix.os }}
     steps:
+      - uses: swift-actions/setup-swift@v2
+        with:
+          swift-version: ${{ matrix.swift }}
       - name: Checkout plugin
         uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
         name: Install dependencies
         with:
           bundler-cache: true
-      - name: Build Static files
+      - name: Install configuration
         run: |
-          rake
+          bundle exec arkana
+      - name: Build Project
+        run: |
+          swift build -c release
+      - name: Create static files
+        run: |
+          swift run -c release
       - name: Checkout Static branch
         uses: actions/checkout@v2
         with:
@@ -25,13 +43,13 @@ jobs:
           clean: false
       - name: Clean folder
         run: |
-          find . -not -name '_site' -not -name '.git' -not -name '.gitignore' -not -name '.' -not -name '..' -maxdepth 1 -exec rm -r "{}" \;
+          find . -not -name 'CNAME' -not -name 'Build' -not -name '.git' -not -name '.gitignore' -not -name '.' -not -name '..' -maxdepth 1 -exec rm -r "{}" \;
       - name: Move files
         run: |
-          cp -r _site/. .
+          cp -r Build/. .
       - name: Remove _site folder
         run: |
-          rm -r _site
+          rm -r Build/
       - name: Configure username
         env:
           USER_EMAIL: ${{ secrets.USER_EMAIL }} 
