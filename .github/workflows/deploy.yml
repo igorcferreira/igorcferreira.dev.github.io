@@ -50,6 +50,9 @@ jobs:
         run: |
           git config user.email "$USER_EMAIL"
           git config user.name "$USER_NAME"
+      - name: Timestamp the deploy
+        run: |
+          echo "$(git log -1 --format='%H')" > .version
       - name: Commit changes
         run: |
           git add . && git commit -m "Publish new version"
