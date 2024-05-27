@@ -22,10 +22,8 @@ val exportTask = tasks.create<Exec>("export") {
 val preview = tasks.create<Exec>("start") {
     val directory = layout.projectDirectory.dir("Build").toString()
     val port = project.properties["port"]?.toString() ?: "8000"
-    doFirst {
-        java.awt.Desktop.getDesktop().browse(URI("http://localhost:$port"))
-    }
-    commandLine("python3", "-m", "http.server", "-d", directory, port)
+    workingDir = layout.projectDirectory.asFile
+    commandLine("./start.sh", "-d", directory, "-p", port)
     standardOutput = System.out
     errorOutput = System.out
     dependsOn(exportTask)
