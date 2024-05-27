@@ -1,7 +1,8 @@
 #!/bin/bash
 
+SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 PORT="8000"
-DIRECTORY="$(pwd)/Build"
+DIRECTORY="$SCRIPTPATH/Build"
 
 while [ -n "$1" ]; do
     case "$1" in
