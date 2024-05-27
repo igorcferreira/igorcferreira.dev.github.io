@@ -14,9 +14,6 @@ jobs:
     environment: main
     runs-on: macos-latest
     steps:
-      - uses: swift-actions/setup-swift@v2
-        with:
-          swift-version: "5"
       - name: Checkout plugin
         uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
