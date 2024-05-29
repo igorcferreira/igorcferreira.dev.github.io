@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "command": "./start.sh",
+            "name": "Start observing",
+            "request": "launch",
+            "type": "node-terminal",
+            "cwd": "${workspaceFolder:DevelopmentBlog}",
+            "preLaunchTask": "swift: Run Release DevelopmentBlog"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:DevelopmentBlog}",
+            "name": "Debug DevelopmentBlog",
+            "program": "${workspaceFolder:DevelopmentBlog}/.build/debug/DevelopmentBlog",
+            "preLaunchTask": "swift: Build Debug DevelopmentBlog"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "args": [],
+            "cwd": "${workspaceFolder:DevelopmentBlog}",
+            "name": "Release DevelopmentBlog",
+            "program": "${workspaceFolder:DevelopmentBlog}/.build/release/DevelopmentBlog",
+            "preLaunchTask": "swift: Build Release DevelopmentBlog"
+        }
+    ]
+}

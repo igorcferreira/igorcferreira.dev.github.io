@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "swift: Run Release DevelopmentBlog",
+      "type": "shell",
+      "command": "swift run -c release",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "dependsOn": ["swift: Build Release DevelopmentBlog"]
+    }
+  ]
+}

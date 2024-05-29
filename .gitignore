@@ -126,7 +126,6 @@ bitrise.yml
 .bitrise.secrets.yml
 
 # IDE
-.vscode/
 support.sh
 
 
