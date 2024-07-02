@@ -36,7 +36,10 @@ jobs:
           clean: false
       - name: Clean folder
         run: |
-          find . -not -name 'CNAME' -not -name 'Build' -not -name '.git' -not -name '.gitignore' -not -name '.' -not -name '..' -maxdepth 1 -exec rm -r "{}" \;
+          find . -not -name 'robots.txt' -not -name 'CNAME' -not -name 'Build' -not -name '.git' -not -name '.gitignore' -not -name '.' -not -name '..' -maxdepth 1 -exec rm -r "{}" \;
+      - name: Remove built robots
+        run: |
+          rm Build/robots.txt
       - name: Move files
         run: |
           cp -r Build/. .
