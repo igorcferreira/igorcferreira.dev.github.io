@@ -11,7 +11,9 @@ struct MyTheme: Theme {
                 Script(file: URL("/script/theme.js"))   
                 Script(file: URL("/script/syntax-highlighting.js"))
                 MetaLink(href: URL("/apple-touch-icon-precomposed.png"), rel: "apple-touch-icon")
+                MetaLink(href: URL("https://mastodon.social/@igorcferreira"), rel: "me")
                 MetaTag(name: "apple-mobile-web-app-title", content: context.site.name)
+                MetaTag(name: "fediverse:creator", content: "@igorcferreira@mastodon.social")
             }
             Body {
                 TopBar(for: page)
