@@ -31,8 +31,7 @@ struct ExampleSite: Site {
             Home.self,
             Categories.self
         ], locales: [
-            Locale(identifier: "en"),
-            Locale(identifier: "pt-BR")
+            Locale(identifier: "en")
         ])
     }
     

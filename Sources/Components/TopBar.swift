@@ -17,19 +17,6 @@ struct TopBar: Component {
     
     func body(context: PublishingContext) -> [any PageElement] {
         NavigationBar {
-            LanguageSelector(attributes: page.body.attributes) {
-                LanguageElement(
-                    for: page,
-                    locale: Locale(identifier: "en")
-                )
-                .class("sidebar-nav-item")
-                
-                LanguageElement(
-                    for: page,
-                    locale: Locale(identifier: "pt-BR")
-                )
-                .class("sidebar-nav-item")
-            }.class("sidebar-nav-item")
             Link(page.dictionary.localised("Home", context: context), target: Home(locale: page.locale))
                 .class("sidebar-nav-item")
             Link(page.dictionary.localised("Categories", context: context), target: Categories(locale: page.locale))
